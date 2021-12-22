@@ -61,7 +61,7 @@ export const Home = () => {
     useEffect(
         function () {
             axios
-                .get("http://localhost:8000/api/todo")
+                .get("https://mern-karthik.herokuapp.com/api/todo")
                 .then((res) => {
                     //console.log(res.data);
                     setTodo(res.data);
@@ -84,7 +84,7 @@ export const Home = () => {
 
         // console.log({ todo });
         axios
-            .post("http://localhost:8000/api/todo", data)
+            .post("https://mern-karthik.herokuapp.com/api/todo", data)
             .then((res) => {
                 setData({ title: "", description: "" });
                 console.log(res.data.message);
@@ -97,7 +97,7 @@ export const Home = () => {
 
     //to delete data
     function handleDelete(e) { // added
-        axios.delete(`http://localhost:8000/api/todo/${e.target.name}`)
+        axios.delete(`https://mern-karthik.herokuapp.com/api/todo/${e.target.name}`)
 
         setTodo((data) => {
             return data.filter((todo) => todo._id !== e.target.name)
@@ -118,7 +118,7 @@ export const Home = () => {
 
     //to upddate data
     function handleUpdate(e) { // added
-        axios.put(`http://localhost:8000/api/todo/${e.target.name}`)
+        axios.put(`https://mern-karthik.herokuapp.com/api/todo/${e.target.name}`)
         console.log("update:", update, !update)
         setUpdate(!update)
     }

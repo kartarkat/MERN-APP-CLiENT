@@ -21,7 +21,7 @@ export function EditItem({ _id, handleClose, handleEdited, close }) {
         // };
         
             axios
-            .put(`http://localhost:8000/api/todo/${_id}`, data)
+            .put(`https://mern-karthik.herokuapp.com/api/todo/${_id}`, data)
             .then((res) => {
                 setData({ title: "", description: "" });
                 console.log(res.data.message);
