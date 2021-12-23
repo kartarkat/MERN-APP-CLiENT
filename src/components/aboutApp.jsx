@@ -12,7 +12,7 @@ export const AboutApp =() =>
 
             <h1 className="display-4 text-left py-1">MERN Full Stack App</h1>
             <p >Hi, Thanks for visiting my app.</p>
-            <p class="description"> developed an app using MERN technologies with basic crud 
+            <p class="description"> Developed an app using MERN technologies with basic CRUD 
             applications.</p>
 <p></p>
             {/* <!-- end row --> */}
@@ -51,7 +51,7 @@ export const AboutApp =() =>
                                 <li class="listm">Setup server using express</li>
                                 <li class="list">Setup REST API with axios</li>
                                 <li class="list">Implemented Controllers & Routes</li>
-                                <li class="list">Validata API calls using REST clients</li>
+                                <li class="list">Validate API calls using REST clients</li>
                                 <li class="list">Deployed server on Heroku <a href="https://mern-karthik.herokuapp.com/">check here</a> </li>
                                 
                             </ul>
@@ -68,7 +68,7 @@ export const AboutApp =() =>
                             <img src={MongodbImg} width="150" height="150" class=" img-thumbnail" alt="profile-image" /></div>
                             <div class="text-center ">
                                 <h4>Database - MongoDB</h4>
-                                <p class="text-muted">LearnedMongoDb and able to do the following tasks </p>
+                                <p class="text-muted">Learnedb MongoDb and able to do the following tasks </p>
                             </div>
                             <ul class="social-links align-baseline">
                                 <li class="listm">Able to work with clusters</li>                                
