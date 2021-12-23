@@ -134,7 +134,7 @@ export const Home = () => {
 
                 <form className="form-inline" onSubmit={handleSubmit}>
                     <div className="row ">
-                        <div className="col-3">
+                        <div className="col-4">
                             <label className="sr-only" htmlFor="title"> <h3> Title: </h3> </label>
                             <input required type="text" placeholder="Enter Title here" className="form-control" name="title" value={data.title} onChange={handleChange} />
                         </div>
