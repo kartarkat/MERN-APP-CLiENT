@@ -11,7 +11,8 @@ export const AboutApp =() =>
             <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
 
             <h1 className="display-4 text-left py-1">MERN Full Stack App</h1>
-            <p class="description">Hi, Thanks for visiting my app, developed an app using MERN technologies with basic crud 
+            <p >Hi, Thanks for visiting my app.</p>
+            <p class="description"> developed an app using MERN technologies with basic crud 
             applications.</p>
 <p></p>
             {/* <!-- end row --> */}
@@ -22,11 +23,11 @@ export const AboutApp =() =>
                             <div class=" text-center thumb-lg member-thumb mx-auto"><img src={ReactImg} width="150" height="150" class="rounded-circle img-thumbnail" alt="profile-image" /></div>
                             <div class="text-center">
                                 <h4>FrontEnd - React JS</h4>
-                                <p class="text-muted">Learn to Implement React JS </p>
+                                <p class="text-muted">Learned React JS and able to do the following tasks </p>
                             </div>
                             <ul class="social-links align-baseline">
-                                <li class="listm">Create singlpe page applications</li>
-                                <li class="list">Build Reusable components</li>
+                                <li class="listm">Create single page applications</li>
+                                <li class="list">Build reusable components</li>
                                 <li class="list">State management with hooks & redux</li>
                                 <li class="list">Git to deploy codes on web</li>
                                 <li class="list">Deployed client on Netlify</li>
@@ -44,7 +45,7 @@ export const AboutApp =() =>
                             <img src={NodeImg} width="150" height="150" class="rounded-circle img-thumbnail" alt="profile-image" /></div>
                             <div class="text-center">
                                 <h4>Backend - Express & Node JS</h4>
-                                <p class="text-muted">Learn to Implement Express & Node JS</p>
+                                <p class="text-muted">Learned Express & Node JS and able to do the following tasks </p>
                             </div>
                             <ul class="social-links align-baseline">
                                 <li class="listm">Setup server using express</li>
@@ -67,7 +68,7 @@ export const AboutApp =() =>
                             <img src={MongodbImg} width="150" height="150" class=" img-thumbnail" alt="profile-image" /></div>
                             <div class="text-center ">
                                 <h4>Database - MongoDB</h4>
-                                <p class="text-muted">Learn to Implement MongoDb Database </p>
+                                <p class="text-muted">LearnedMongoDb and able to do the following tasks </p>
                             </div>
                             <ul class="social-links align-baseline">
                                 <li class="listm">Able to work with clusters</li>                                
