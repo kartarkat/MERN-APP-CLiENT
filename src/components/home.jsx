@@ -70,6 +70,8 @@ export const Home = () => {
                     console.log(err.message);
                 });
         },
+       
+
         //[update] // updated
     );
 
@@ -116,7 +118,7 @@ export const Home = () => {
         setOpen(false);
     }
 
-    //to upddate data
+    //to update data
     function handleUpdate(e) { // added
         axios.put(`https://mern-karthik.herokuapp.com/api/todo/${e.target.name}`)
         console.log("update:", update, !update)

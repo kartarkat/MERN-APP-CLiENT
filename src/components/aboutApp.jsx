@@ -1,5 +1,5 @@
 import React from 'react'
-import FrontImg from "../images/frontend.png"
+
 import NodeImg from "../images/node.png"
 import MongodbImg from "../images/mongodb.png"
 import ReactImg from "../images/react.gif"
