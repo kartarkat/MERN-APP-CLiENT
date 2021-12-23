@@ -51,7 +51,7 @@ export const AboutApp =() =>
                                 <li class="list">Setup REST API with axios</li>
                                 <li class="list">Implemented Controllers & Routes</li>
                                 <li class="list">Validata API calls using REST clients</li>
-                                <li class="list">Deployed server on <a href="https://mern-karthik.herokuapp.com/">Heroku</a>></li>
+                                <li class="list">Deployed server on Heroku <a href="https://mern-karthik.herokuapp.com/">check here</a> </li>
                                 
                             </ul>
                             

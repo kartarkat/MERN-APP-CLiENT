@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, UNSAFE_NavigationContext } from "react-router-dom";
 import { EditItem } from "./editItem"
 
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
+
 
 
 //to list data
@@ -57,9 +58,19 @@ export const Home = () => {
         setData((data) => ({ ...data, [e.target.name]: e.target.value }));
     }
 
+    //pass
+    function pass(req, res, next){
+        res.set('WWW-Authenticate','Basic realm="MERN-APP')
+        if(req.headers.authorization == "pass"){
+            next()
+        }else{
+            res.status(401).send("Authentication require")}
+    }
     // //api
     useEffect(
+
         function () {
+           
             axios
                 .get("https://mern-karthik.herokuapp.com/api/todo")
                 .then((res) => {
@@ -69,6 +80,7 @@ export const Home = () => {
                 .catch((err) => {
                     console.log(err.message);
                 });
+
         },
        
 
