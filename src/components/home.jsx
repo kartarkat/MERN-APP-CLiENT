@@ -111,11 +111,13 @@ export const Home = () => {
 
     //to delete data
     function handleDelete(e) { // added
+        if(confirm("Do you really want to delete this?")){
         axios.delete(`https://mern-karthik.herokuapp.com/api/todo/${e.target.name}`)
 
         setTodo((data) => {
             return data.filter((todo) => todo._id !== e.target.name)
-        })
+        })}
+        
     }
 
     //to edit data
