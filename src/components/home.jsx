@@ -53,6 +53,8 @@ export const Home = () => {
     const [open, setOpen] = useState(false); // added
     const [id, setId] = useState(""); // added
     const [update, setUpdate] = useState(false);
+    const [add, setAdd] = useState(false);
+    const [del, setDel] = useState(false);
 
     function handleChange(e) {
         setData((data) => ({ ...data, [e.target.name]: e.target.value }));
@@ -84,7 +86,7 @@ export const Home = () => {
         },
        
 
-      [update] 
+      [update] [add]
     );
 
     //to create new data
@@ -102,6 +104,7 @@ export const Home = () => {
             .then((res) => {
                 setData({ title: "", description: "" });
                 console.log(res.data.message);
+                setAdd(!add)
             })
             .catch((err) => {
                 console.log("Error couldn't create TODO");
@@ -110,15 +113,18 @@ export const Home = () => {
     }
 
     // //to delete data
-    // function handleDelete(e) { // added
-    //     if(confirm("Do you really want to delete this?")){
-    //     axios.delete(`https://mern-karthik.herokuapp.com/api/todo/${e.target.name}`)
-
-    //     setTodo((data) => {
-    //         return data.filter((todo) => todo._id !== e.target.name)
-    //     })}
+    function handleDelete(e) { // added
+       // if(confirm("Do you really want to delete this?")){
+        axios.delete(`https://mern-karthik.herokuapp.com/api/todo/${e.target.name}`)
         
-    // }
+
+        setTodo((data) => {
+            return data.filter((todo) => todo._id !== e.target.name)
+        }) 
+        setDel(!del)
+        //}
+        
+    }
 
     //to edit data
     function handleEdit(e) { // added
@@ -184,7 +190,7 @@ export const Home = () => {
                             <ListData
                                 data={data}
                                 handleEdit={handleEdit}
-                                //handleDelete={handleDelete}
+                                handleDelete={handleDelete}
                                 handleClose={handleClose}
                                 handleUpdate={handleUpdate}
                             />
