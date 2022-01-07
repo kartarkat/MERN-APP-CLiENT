@@ -1,14 +1,36 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import { HashRouter } from "react-router-dom";
 
 export function EditItem({ _id, handleClose, handleEdited, close }) {
     const [todo, setTodo] = useState([]);
     const [data, setData] = useState({ title: "", description: "" });
+    const [edit, setEdit] = useState(false);
 
     function handleChange(e) {
         setData((data) => ({ ...data, [e.target.name]: e.target.value }));
     }
+
+    
+    useEffect(
+
+        function () {
+           
+            axios
+                .get(`https://mern-karthik.herokuapp.com/api/todo/${_id}`)
+                .then((res) => {
+                    //console.log(res.data);
+                    setTodo(res.data);
+                })
+                .catch((err) => {
+                    console.log(err.message);
+                });
+
+         },
+       
+
+      [edit]
+    )
 
     function handleSubmit(e ) {
         //const { _id, title, description } = data;
@@ -27,11 +49,14 @@ export function EditItem({ _id, handleClose, handleEdited, close }) {
                 console.log(res.data.message);
                 //setData((data) => ({ ...data, [e.target.name]: e.target.value }));
                 //handleChange()
+                setEdit(!edit)
             })
             .catch((err) => {
                 console.log("Failed to update todo");
                 console.log(err.message);
             });
+
+            //useEffect()
 
 
     }

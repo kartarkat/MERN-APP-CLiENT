@@ -54,7 +54,8 @@ export const Home = () => {
     const [id, setId] = useState(""); // added
     const [update, setUpdate] = useState(false);
     const [add, setAdd] = useState(false);
-    const [del, setDel] = useState(false);
+    const [dele, setDele] = useState(false);
+    const [edit, setEdit] = useState(false);
 
     function handleChange(e) {
         setData((data) => ({ ...data, [e.target.name]: e.target.value }));
@@ -83,10 +84,10 @@ export const Home = () => {
                     console.log(err.message);
                 });
 
-        },
+         },
        
 
-      [update] [add]
+      [add, dele, edit]
     );
 
     //to create new data
@@ -121,15 +122,16 @@ export const Home = () => {
         setTodo((data) => {
             return data.filter((todo) => todo._id !== e.target.name)
         }) 
-        setDel(!del)
+        setDele(!dele)
         //}
         
     }
 
     //to edit data
-    function handleEdit(e) { // added
+   function handleEdit(e) { // added
         setId(e.target.name);
         setOpen(true)
+        setEdit(!edit)
     }
 
     //to close edit data
