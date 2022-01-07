@@ -84,7 +84,7 @@ export const Home = () => {
         },
        
 
-        //[update] // updated
+      [update] 
     );
 
     //to create new data
@@ -109,16 +109,16 @@ export const Home = () => {
             });
     }
 
-    //to delete data
-    function handleDelete(e) { // added
-        if(confirm("Do you really want to delete this?")){
-        axios.delete(`https://mern-karthik.herokuapp.com/api/todo/${e.target.name}`)
+    // //to delete data
+    // function handleDelete(e) { // added
+    //     if(confirm("Do you really want to delete this?")){
+    //     axios.delete(`https://mern-karthik.herokuapp.com/api/todo/${e.target.name}`)
 
-        setTodo((data) => {
-            return data.filter((todo) => todo._id !== e.target.name)
-        })}
+    //     setTodo((data) => {
+    //         return data.filter((todo) => todo._id !== e.target.name)
+    //     })}
         
-    }
+    // }
 
     //to edit data
     function handleEdit(e) { // added
@@ -184,7 +184,7 @@ export const Home = () => {
                             <ListData
                                 data={data}
                                 handleEdit={handleEdit}
-                                handleDelete={handleDelete}
+                                //handleDelete={handleDelete}
                                 handleClose={handleClose}
                                 handleUpdate={handleUpdate}
                             />

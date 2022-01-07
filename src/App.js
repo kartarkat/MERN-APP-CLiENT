@@ -11,6 +11,7 @@ import { DevProfile } from "./components/devProfile"
 import { AboutApp } from "./components/aboutApp"
 
 
+
 function App() {
     return (
         <div className="app-contents">
